@@ -1,0 +1,13 @@
+@import "compass";
+@import "bootstrap_overrides";
+@import "compass_twitter_bootstrap";
+@import "compass_twitter_bootstrap_awesome";
+
+.navbar {
+  font-size: 13px;
+  margin-bottom: 20px;
+}
+
+.navbar-inner {
+  @include clearfix();
+}

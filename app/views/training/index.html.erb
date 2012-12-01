@@ -1,0 +1,14 @@
+<div ng-app="training" class="container-fluid" ng-controller="trainingController">
+    <div class="row-fluid" ng-show="loading">
+        <div class="alert alert-info">
+            <%= image_tag("common/loading_16.gif") %>
+            Loading... Please wait.
+        </div>
+    </div>
+
+    <div ng-view></div>
+    <common-modal-new-training-record></common-modal-new-training-record>
+    <common-modal-error></common-modal-error>
+    <common-modal-progress></common-modal-progress>
+    <common-modal-confirmation></common-modal-confirmation>
+</div>

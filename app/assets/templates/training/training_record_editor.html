@@ -1,0 +1,64 @@
+<td class="td-checkbox" ng-show="batchUpdate">
+    <input type="checkbox" ng-model="record.selected" ng-click="onSelect()">
+</td>
+
+<td class="td-competency" ng-show="displayCompetency">
+    <a ng-hide="record.editMode" ng-href="competencies/{{record.competency.id}}">{{record.competency.name}}</a>
+    <span ng-show="record.editMode" >{{record.competency.name}}</span>
+</td>
+
+<td class="td-employee" ng-show="displayEmployee">
+    <a ng-hide="record.editMode" ng-href="employees/{{record.trainee.id}}">{{record.trainee.firstName}} {{record.trainee.lastName}}</a>
+    <span ng-show="record.editMode">{{record.trainee.firstName}} {{record.trainee.lastName}}</span>
+</td>
+
+<td ng-switch on="record.editMode">
+    <span ng-switch-when="false">{{ record.trainedOn | commonLocalDate: 'mediumDate'}}</span>
+    <div ng-switch-when="true">
+        <input readonly="readonly" class="input-date input-small" ng-model="editRecord.trainedOnDate" ui-date="dateOptions">
+    </div>
+</td>
+
+<td ng-switch on="record.editMode">
+    <span ng-switch-when="false">{{record.trainedById | employeeIdName}}</span>
+    <div ng-switch-when="true">
+        <select class="select-medium" ui-select2 ui-select2-click-fixer id="inputTrainedById" ng-model="editRecord.trainedById">
+            <option ng-repeat="trainer in trainers" value="{{trainer.id}}">{{trainer.firstName}} {{trainer.lastName}}</option>
+        </select>
+    </div>
+</td>
+
+<td>
+    <span data-original-title="Published: {{competency.publishedOn | commonLocalDate: 'mediumDate'}}" ui-jq="tooltip" ng-show="outOfDate()" class="badge badge-important badge-out-of-date">!</span>
+</td>
+
+<td ng-switch on="record.editMode">
+    <span ng-switch-when="false">{{ record.certifiedOn | commonLocalDate: 'mediumDate'}}</span>
+
+    <div ng-switch-when="true">
+        <input readonly="readonly" class="input-date input-small" ng-model="editRecord.certifiedOnDate" ui-date="dateOptions">
+    </div>
+</td>
+
+<td ng-switch on="record.editMode">
+    <span ng-switch-when="false">{{record.certifiedById | employeeIdName}}</span>
+    <div ng-switch-when="true">
+        <select class="select-medium" ui-select2 ui-select2-click-fixer id="inputCertifiedById" ng-model="editRecord.certifiedById">
+            <option value="">-- uncertified --</option>
+            <option ng-repeat="certifier in certifiers" value="{{certifier.id}}">{{certifier.firstName}} {{certifier.lastName}}</option>
+        </select>
+    </div>
+</td>
+
+<td class="td-edit" ng-show="canEditTrainingRecord">
+    <img src="{{loadingImage}}" alt="loadingImage" ng-show="inProgress">
+    <div ng-hide="inProgress">
+        <span ng-show="canAdd()"><button class="btn" ng-click="onAdd()"><i class="icon-plus"></i> Add</button></span>
+        <span ng-show="canEdit()"><button class="btn" ng-click="onEdit()"><i class="icon-edit"></i> Edit</button></span>
+        <span ng-show="canDelete()"><button class="btn" ng-click="onDelete()"><i class="icon-trash"></i> Delete</button></span>
+        <span ng-show="record.editMode">
+            <button class="btn btn-success" ng-click="onSave()"><i class="icon-ok"></i> Save</button>
+            <button class="btn" ng-click="onCancel()"><i class="icon-remove"></i> Cancel</button>
+        </span>
+    </div>
+</td>

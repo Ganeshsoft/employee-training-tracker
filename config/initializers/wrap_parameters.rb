@@ -1,0 +1,22 @@
+# Be sure to restart your server when you modify this file.
+#
+# This file contains settings for ActionController::ParamsWrapper which
+# is enabled by default.
+
+# Enable parameter wrapping for JSON. You can disable this by setting :format to an empty array.
+#ActiveSupport.on_load(:action_controller) do
+#  wrap_parameters format: [:json]
+#end
+ActiveSupport.on_load(:action_controller) do
+  wrap_parameters format: []
+end
+
+# Disable root element in JSON by default.
+ActiveSupport.on_load(:active_record) do
+  self.include_root_in_json = false
+end
+
+#ActiveResource::Base.include_root_in_json = false
+
+# this is how to do it with active_model_serializers, but doesn't work and we decided we are going to wrap results
+#ActiveModel::ArraySerializer.root = false

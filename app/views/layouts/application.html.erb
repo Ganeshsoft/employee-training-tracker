@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title><%= content_for?(:title) ? yield(:title) : "Employee Training Tracker" %></title>
+    <meta name="description" content="Employee Training Tracker">
+    <!-- This is to enable html5 location support in AngularJS -->
+    <base href="/<%= controller.controller_path %>/">
+
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag "application", :media => "all" %>
+
+    <%= favicon_link_tag %>
+    <%= yield :head %>
+</head>
+<body>
+
+<div class="navbar navbar-static-top">
+    <div class="navbar-inner">
+        <%= semantic_navigation :primary, config: :bootstrap %>
+        <% if user_signed_in? %>
+            <ul class="nav pull-right">
+                <li><%= link_to 'Sign Out', destroy_user_session_path, :method => :delete %></li>
+            </ul>
+        <% end %>
+    </div>
+</div>
+
+<% if notice %>
+    <div class="alert alert-info">
+        <button type="button" class="close" data-dismiss="alert">x</button>
+        <%= notice %>
+    </div>
+<% end %>
+
+<% if alert %>
+    <div class="alert">
+        <button type="button" class="close" data-dismiss="alert">x</button>
+        <%= alert %>
+    </div>
+<% end %>
+
+<%= yield %>
+
+<%= javascript_include_tag 'application' %>
+<%= yield :javascripts %>
+
+</body>
+</html>

@@ -1,0 +1,190 @@
+/*
+*= require select2
+*= require_self
+*/
+
+.select-smaller {
+    height: 28px;
+    width: 84px;
+}
+.select-small {
+    height: 28px;
+    width: 120px;
+}
+
+.select-medium {
+    height: 28px;
+    width: 148px;
+}
+
+.select-large {
+    height: 28px;
+    width: 180px;
+}
+.select-xlarge {
+    height: 28px;
+    width: 400px;
+}
+
+input.input-date[readonly] {
+    width: 72px;
+    cursor: auto;
+    background-color: white;
+}
+
+/* ---------------------------- */
+/* Title                        */
+/* ---------------------------- */
+
+.breadcrumb {
+    margin-bottom: 24px;
+}
+
+.header-title h3 {
+    font-size: 24px;
+    color: #357221;
+    margin-bottom: 24px;
+}
+
+.header-title-error h3 {
+    font-size: 24px;
+    color: #C20000;
+    margin-bottom: 24px;
+}
+
+/* ---------------------------- */
+/* Nav Bar                      */
+/* ---------------------------- */
+.active-page {
+    background-color: #a9dba9;
+}
+
+.inactive {
+
+}
+
+.nav-list li {
+    line-height: 18px;
+}
+
+/* ---------------------------- */
+/* Training Search Fields       */
+/* ---------------------------- */
+
+.training-search-fields .info-span {
+    display: inline-block;
+    width: 100px;
+}
+
+.training-search-fields .input-date {
+    width: 72px;
+}
+
+.training-search-fields .input-small {
+    width: 102px;
+}
+
+/* ---------------------------- */
+/* Competency Info Fields       */
+/* ---------------------------- */
+
+.edit-publish-date-save-cancel {
+    margin-top: 4px;
+}
+
+/* ---------------------------- */
+/* Training Tables              */
+/* ---------------------------- */
+
+/* Search Results */
+
+.table-competencies {
+    margin-top: 24px;
+}
+
+.table-competencies th {
+    width: 15%;
+    padding-top: 0px;
+}
+
+.table-competencies .table-header-titles .th-competency,
+.table-competencies .th-competency {
+    width: 40%;
+}
+
+.table-competencies .table-header-bottom .blank-column-header {
+    border-bottom: none;
+}
+
+.table-competencies th input {
+    margin-top: 4px;
+    margin-bottom: 2px;
+}
+
+.table-competencies th select {
+    margin-top: 4px;
+    margin-bottom: 2px;
+}
+
+.table-competencies .form-inline,
+.table-competencies .form-horizontal,
+.table-competencies .control-group,
+.table-competencies .controls {
+    height: 24px;
+}
+
+.table-competencies .date-text {
+    width: 64px;
+    height: 16px;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.table-competencies .input-date {
+    display: inline-block;
+    cursor: auto;
+    background-color: white;
+}
+
+
+/* Training Records */
+
+.table-training-records th {
+    width: 12%;
+}
+
+.table-training-records tr {
+    height: 39px;
+}
+
+.table-training-records .table-header-titles .th-competency,
+.table-training-records .th-competency,
+.table-training-records .th-employee {
+    width: 32%;
+}
+
+.table-training-records .th-out-of-date {
+  width: 1%;
+}
+
+.table-training-records .th-edit {
+    width: 18%;
+}
+
+.table-training-records .th-checkbox,
+.table-training-records .td-checkbox{
+    width: 1%;
+}
+
+
+/* ---------------------------- */
+/* Modals                       */
+/* ---------------------------- */
+
+.modal-new-training-record .extra-margin-bottom {
+    margin-bottom: 64px;
+}
+
+.modal-new-training-record .select-xlarge {
+    width: 360px;
+}

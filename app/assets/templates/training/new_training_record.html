@@ -1,0 +1,85 @@
+<form name="newTrainingRecordForm" class="modal modal-form modal-new-training-record hide" data-backdrop="static" id="modalNewTrainingRecord">
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><i class="icon-remove"></i></button>
+        <h3>New Training Record</h3>
+    </div>
+    <div class="modal-body">
+        <div class="form-horizontal training-record-input">
+            <div class="control-group">
+                <label class="control-label" for="inputCompetencyId">Competency:</label>
+                <div class="controls">
+                    <select class="select-xlarge" id="inputCompetencyId"
+                            ui-select2 ui-select2-click-fixer ng-model="record.competencyId" ng-disabled="isLocked('competency')">
+                        <option value="">-- required --</option>
+                        <option ng-repeat="competency in competencies" value="{{competency.id}}">{{competency.name}}</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="control-group">
+                <label class="control-label" for="inputTraineeId">Employee:</label>
+                <div class="controls">
+                    <select class="select-large" id="inputTraineeId"
+                            ui-select2 ui-select2-click-fixer ng-model="record.traineeId" ng-disabled="isLocked('trainee')">
+                        <option value="">-- required --</option>
+                        <option ng-repeat="employee in employees" value="{{employee.id}}">{{employee.firstName}} {{employee.lastName}}</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="control-group">
+                <label class="control-label" for="inputTrainedOn">Trained On:</label>
+                <div class="controls">
+                    <input id="inputTrainedOn" class="input-small"
+                           ng-model="record.trainedOnDate" ui-date="dateOptions" ng-disabled="isLocked('trainedOn')">
+                </div>
+            </div>
+
+            <div class="control-group">
+                <label class="control-label" for="inputTrainedById">Trained By:</label>
+                <div class="controls">
+                    <select class="select-large" ui-select2 ui-select2-click-fixer id="inputTrainedById" ng-model="record.trainedById" ng-disabled="isLocked('trainedBy')">
+                        <option value="">-- required --</option>
+                        <option ng-repeat="employee in employees" value="{{employee.id}}">{{employee.firstName}} {{employee.lastName}}</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="control-group" ng-hide="uncertified">
+                <label class="control-label" for="inputCertifiedOn">Certification:</label>
+                <div class="controls">
+                    <input id="inputCertifiedOn" class="input-small"
+                           ng-model="record.certifiedOnDate" ui-date="dateOptions" ng-disabled="isLocked('certifiedOn')">
+                    <button class="btn btn-clickable-icon" ng-click="onUncertify()"><i class="icon-ban-circle"></i></button>
+                </div>
+            </div>
+
+            <div class="control-group" ng-hide="uncertified">
+                <label class="control-label" for="inputCertifiedById">Certified By:</label>
+                <div class="controls">
+                    <select class="select-large" ui-select2 ui-select2-click-fixer id="inputCertifiedById"
+                            ng-model="record.certifiedById" ng-disabled="isLocked('certifiedBy')">
+                        <option value="">-- required --</option>
+                        <option ng-repeat="employee in employees" value="{{employee.id}}">{{employee.firstName}} {{employee.lastName}}</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="control-group" ng-show="uncertified">
+                <label class="control-label" for="inputCertifiedOn">Uncertified:</label>
+                <div class="controls">
+                    <span class="input-small info-value">
+                        <button class="btn btn-clickable-icon" ng-click="onEditCertification()"><i class="icon-edit"></i></button>
+                    </span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button class="btn btn-success {{saveButtonState}}" ng-disabled="!isReadyForSubmit()"
+                ng-click="onSaveTrainingRecord()"><i class="icon-ok"></i> Save
+        </button>
+        <button class="btn" data-dismiss="modal"><i class="icon-remove"></i> Cancel</button>
+    </div>
+</form>

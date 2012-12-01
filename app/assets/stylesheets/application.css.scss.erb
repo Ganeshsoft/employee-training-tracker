@@ -1,0 +1,246 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ *= require jquery-ui
+ *= require select2
+ */
+
+$navbarBackground:          <%= Rails.configuration.navbar_background %>;
+$navbarBackgroundHighlight: <%= Rails.configuration.navbar_background_highlight %>;
+$navbarLinkBackgroundHover: <%= Rails.configuration.navbar_link_background_hover %>;
+$baseLineHeight: 20px;
+
+@import "bootstrap_base";
+
+/* ---------------------------- */
+/* Custom Buttons               */
+/* ---------------------------- */
+
+.btn-success {
+    background-color: hsl(86, 79%, 44%) !important;
+    background-repeat: repeat-x;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#daf6b5", endColorstr="#7cc817");
+    background-image: -khtml-gradient(linear, left top, left bottom, from(#daf6b5), to(#7cc817));
+    background-image: -moz-linear-gradient(top, #daf6b5, #7cc817);
+    background-image: -ms-linear-gradient(top, #daf6b5, #7cc817);
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #daf6b5), color-stop(100%, #7cc817));
+    background-image: -webkit-linear-gradient(top, #daf6b5, #7cc817);
+    background-image: -o-linear-gradient(top, #daf6b5, #7cc817);
+    background-image: linear-gradient(#daf6b5, #7cc817);
+    border-color: #7cc817 #7cc817 hsl(86, 79%, 34%);
+    color: #333 !important;
+    text-shadow: 0 1px 1px rgba(255, 255, 255, 0.66);
+    -webkit-font-smoothing: antialiased;
+}
+
+.btn-clickable-icon {
+    width: 15px;
+    height: auto;
+    padding: 0 0 0 0;
+    background-color: hsl(0, 0%, 100%) !important;
+    background-repeat: repeat-x;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr = "#ffffff", endColorstr = "#ffffff");
+    background-image: -khtml-gradient(linear, left top, left bottom, from(#ffffff), to(#ffffff));
+    background-image: -moz-linear-gradient(top, #ffffff, #ffffff);
+    background-image: -ms-linear-gradient(top, #ffffff, #ffffff);
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ffffff), color-stop(100%, #ffffff));
+    background-image: -webkit-linear-gradient(top, #ffffff, #ffffff);
+    background-image: -o-linear-gradient(top, #ffffff, #ffffff);
+    background-image: linear-gradient(#ffffff, #ffffff);
+    border-color: #ffffff #ffffff hsl(0, 0%, 100%);
+    color: #333 !important;
+    text-shadow: 0 1px 1px rgba(255, 255, 255, 0.00);
+    -webkit-font-smoothing: antialiased;
+}
+
+.btn-left {
+    float: left;
+}
+
+.btn-xlarge {
+    @extend .btn-large;
+    font-size: 32px;
+}
+
+/* ---------------------------- */
+/* Input Size Defaults          */
+/* ---------------------------- */
+
+.select-smaller {
+    width: 84px;
+}
+.select-small {
+    width: 120px;
+}
+
+.select-medium {
+    width: 148px;
+}
+
+.select-large {
+    width: 180px;
+}
+
+.select-larger {
+    width: 240px;
+}
+
+.select-xlarge {
+    width: 400px;
+}
+
+input.input-date[readonly] {
+    width: 72px;
+    cursor: auto;
+    background-color: white;
+}
+
+
+/* ---------------------------- */
+/* Table Defaults               */
+/* ---------------------------- */
+.table th {
+    width: 15%;
+    padding: 1em .5em .5em .5em;
+    text-align: left;
+    background-color: transparent;
+    border-top: none;
+    border-bottom: none;
+}
+
+.table .table-header-titles th {
+    font-family: Verdana, sans-serif;
+    text-transform: uppercase;
+    color: #357221;
+}
+
+.table .table-header-bottom th {
+    border-bottom: 1px #357221 solid;
+}
+
+.table td {
+    text-align: left;
+    vertical-align: middle;
+    border-bottom: none;
+    font-family: Verdana, sans-serif;
+}
+
+.input-xsmall {
+    width: 2em;
+}
+
+/* ---------------------------- */
+/* Action bar across bottom     */
+/* ---------------------------- */
+
+.btn-toolbar-nospace >.btn-group + .btn-group {
+margin-left: -5px;
+}
+
+.btn-toolbar-nospace > .btn-group > .btn, .btn-toolbar-nospace > .btn-group > .dropdown-toggle
+{
+    -webkit-border-radius: 0px;
+    border-radius: 0px;
+    -moz-border-radius: 0px;
+}
+
+.btn-toolbar-nospace > .btn-group:first-child > .btn, .btn-toolbar-nospace > .btn-group:first-child > .dropdown-toggle{
+    -webkit-border-bottom-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    -webkit-border-top-left-radius: 4px;
+    border-top-left-radius: 4px;
+    -moz-border-radius-bottomleft: 4px;
+    -moz-border-radius-topleft: 4px;
+}
+
+.btn-toolbar-nospace > .btn-group:last-child > .btn:last-child, .btn-toolbar-nospace > .btn-group:last-child > .dropdown-toggle:nth-last-child(2){
+    -webkit-border-bottom-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    -webkit-border-top-right-radius: 4px;
+    border-top-right-radius: 4px;
+    -moz-border-radius-bottomright: 4px;
+    -moz-border-radius-topright: 4px;
+}
+
+.save-group {
+    margin-top: 7px;
+}
+
+/* ---------------------------- */
+/* Modal Defaults               */
+/* ---------------------------- */
+.modal-header {
+    background-color: #3B8337;
+    color: white;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#46A546", endColorstr="#336D2D");
+    background-image: -khtml-gradient(linear, left top, left bottom, from(#46A546), to(#336D2D));
+    background-image: -moz-linear-gradient(top, #46A546, #336D2D);
+    background-image: -ms-linear-gradient(top, #46A546, #336D2D);
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #46A546), color-stop(100%, #336D2D));
+    background-image: -webkit-linear-gradient(top, #46A546, #336D2D);
+    background-image: -o-linear-gradient(top, #46A546, #336D2D);
+    background-image: linear-gradient(#46A546, #336D2D);
+}
+
+.modal-error .modal-header {
+    background-color: #C20000;
+    color: white;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#C20000", endColorstr="#9E0000");
+    background-image: -khtml-gradient(linear, left top, left bottom, from(#C20000), to(#9E0000));
+    background-image: -moz-linear-gradient(top, #C20000, #9E0000);
+    background-image: -ms-linear-gradient(top, #C20000, #9E0000);
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #C20000), color-stop(100%, #9E0000));
+    background-image: -webkit-linear-gradient(top, #C20000, #9E0000);
+    background-image: -o-linear-gradient(top, #C20000, #9E0000);
+    background-image: linear-gradient(#C20000, #9E0000);
+}
+
+.modal-warning .modal-header {
+    background-color: #f88c00;
+    color: white;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ff9e08", endColorstr="#f87000");
+    background-image: -khtml-gradient(linear, left top, left bottom, from(#ff9e08), to(#f87000));
+    background-image: -moz-linear-gradient(top, #ff9e08, #f87000);
+    background-image: -ms-linear-gradient(top, #ff9e08, #f87000);
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ff9e08), color-stop(100%, #f87000));
+    background-image: -webkit-linear-gradient(top, #ff9e08, #f87000);
+    background-image: -o-linear-gradient(top, #ff9e08, #f87000);
+    background-image: linear-gradient(#ff9e08, #f87000);
+}
+
+.modal-form {
+    overflow: visible;
+}
+
+.modal-form .modal-body {
+    overflow: visible;
+}
+
+/* ---------------------------- */
+/* Form Customizations          */
+/* ---------------------------- */
+.form-horizontal {
+    .control-group {
+        margin-bottom: $baseLineHeight / 2;
+    }
+
+    .info-label {
+        @extend .control-label;
+        text-align: left;
+        width: auto;
+    }
+
+    .controls .btn-clickable-icon {
+        padding-top: 5px;
+    }
+}
+
+@import "training";

@@ -1,0 +1,15 @@
+<div id="modalConfirmation" class="modal modal-confirmation hide" data-backdrop="static" ng-class="warningLevel" >
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i class="icon-remove"></i></button>
+        <h3>{{title}}</h3>
+    </div>
+
+    <div class="modal-body">
+        <h4 ng-repeat="bodyItem in body">{{bodyItem}}</h4>
+    </div>
+
+    <div class="modal-footer">
+        <img src="{{loadingImage}}" alt="loadingImage" ng-show="inProgress">
+        <button class="btn" ng-click="onButtonClick(button.callback)" ng-disabled="inProgress" ng-repeat="button in buttons"><i ng-show="button.icon" class="{{button.icon}}"></i> {{button.text}}</button>
+    </div>
+</div>

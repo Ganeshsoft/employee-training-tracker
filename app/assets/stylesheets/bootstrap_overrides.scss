@@ -1,0 +1,11 @@
+// baseLineHeight we want set to 12px for XRMS but we use !default so we can set it in application.css.scss for our new rails UIs
+$baseLineHeight:                12px !default;
+
+// we first import the variables so we have stuff like green, white, etc defined for use then we override
+@import "compass_twitter_bootstrap/_variables";
+
+$navbarText:                    $grayLighter;
+$navbarLinkColor:               $white;
+$navbarLinkColorHover:          #ffff00;  //yellow
+$navbarLinkColorActive:         $navbarLinkColorHover;
+$navbarLinkBackgroundActive:    $navbarBackground;
