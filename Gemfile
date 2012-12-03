@@ -4,7 +4,7 @@ gem 'rails', '3.2.9'
 
 gem 'sqlite3'
 
-gem 'restful_json', '>= 3.0.0.alpha.27', :git => 'git://github.com/garysweaver/restful_json.git'
+gem 'restful_json', '>= 3.0.0.alpha.27', :git => 'git://github.com/FineLinePrototyping/restful_json.git'
 gem 'devise'
 gem 'cancan'
 gem 'navigasmic'
