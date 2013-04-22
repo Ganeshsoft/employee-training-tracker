@@ -87,7 +87,8 @@ This app was written by [FineLine Prototyping, Inc.](http://www.finelineprototyp
 * Tommy Odom (https://github.com/tpodom)
 
 ## License
-Copyright (c) 2012 FineLine Prototyping, Inc.
+
+Copyright (c) 2013 FineLine Prototyping, Inc.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
@@ -99,7 +100,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 [ams]: https://github.com/rails-api/active_model_serializers
 [sp]: https://github.com/rails/strong_parameters
 [permitters]: http://www.broadcastingadam.com/2012/07/parameter_authorization_in_rails_apis/
-[restful-json]: https://github.com/garysweaver/restful_json
+[restful-json]: https://github.com/rubyservices/restful_json
 [arr]: https://github.com/tpodom/angularjs-rails-resource
 [jasmine]: http://pivotal.github.com/jasmine/
 [jasmine-gem]: https://github.com/pivotal/jasmine-gem
