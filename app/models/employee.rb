@@ -1,5 +1,4 @@
 class Employee < ActiveRecord::Base
-  include RestfulJson::Model
 
   belongs_to :department
   has_many :trainer_records, foreign_key: :trained_by_id, class_name: 'TrainingRecord'

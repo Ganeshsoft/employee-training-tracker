@@ -1,6 +1,3 @@
-# Enable cross-origin for local development
-$restful_json_cors_globally_enabled = true
-
 Training::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb
 
@@ -46,11 +43,4 @@ Training::Application.configure do
   config.navbar_background_highlight = '#555555'
   config.navbar_link_background_hover = '#666666'
 
-  #config.after_initialize do
-  #  ActiveRecord::Base.logger = Rails.logger.clone
-  #  ActiveRecord::Base.logger.level = Logger::WARN
-  #  ActionController::Base.logger = Rails.logger.clone
-  #  ActionController::Base.logger.level = Logger::WARN
-  #  # controlling asset logging via "quiet_assets" gem
-  #end
 end

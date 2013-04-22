@@ -1,5 +1,4 @@
 class TrainingRecord < ActiveRecord::Base
-  include RestfulJson::Model
   
   belongs_to :trainee, class_name: 'Employee'
   belongs_to :certified_by, class_name: 'Employee'

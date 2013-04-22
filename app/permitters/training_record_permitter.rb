@@ -1,9 +1,5 @@
 class TrainingRecordPermitter < ApplicationPermitter
-  permit :certified_by_id
-  permit :certified_on
-  permit :competency_id
-  permit :id
-  permit :trained_by_id
-  permit :trained_on
-  permit :trainee_id
+
+  permit :certified_by_id, :certified_on, :competency_id, :id, :trained_by_id, :trained_on, :trainee_id
+
 end

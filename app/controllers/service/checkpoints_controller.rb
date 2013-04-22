@@ -1,5 +1,5 @@
 class Service::CheckpointsController < ApplicationController
 
-  acts_as_restful_json
+  include RestfulJson::DefaultController
 
 end

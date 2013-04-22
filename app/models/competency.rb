@@ -1,5 +1,4 @@
 class Competency < ActiveRecord::Base
-  include RestfulJson::Model
 
   belongs_to :department
   belongs_to :competency_category

@@ -1,14 +1,14 @@
 Training::Application.routes.draw do
   devise_for :users
 
+  root :to => redirect("/training/")
+
   ActiveAdmin.routes(self)
 
   devise_for :admin_users, ActiveAdmin::Devise.config
 
   get '/training', :to => 'training#index'
   get '/training/*ng_route', :to => 'training#index'
-
-  root :to => redirect("/training/")
 
   namespace :service do
     resources :competencies

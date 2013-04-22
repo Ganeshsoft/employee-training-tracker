@@ -1,10 +1,11 @@
 RestfulJson.configure do
-  self.can_filter_by_default_using = [:eq]
-  self.debug = false
-  self.filter_split = ','
-  self.formats = :json
-  self.number_of_records_in_a_page = 15
-  self.predicate_prefix = '!'
+  # we use this, and it is different from the default config
   self.return_resource = true
-end
 
+  # being explicit about these because we use them
+  self.use_permitters = true
+  self.return_error_data = true
+
+  # being explicit about this because the version of ActiveModel::Serializers we use has had issues with respond_with
+  self.avoid_respond_with = true
+end

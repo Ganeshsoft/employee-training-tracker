@@ -63,7 +63,7 @@ module Training
     # times are stored in DB as UTC, but we should indicate what timezone we are in
     config.time_zone = 'America/New_York'
 
-    # restful_json includes strong_parameters which is part of rails 4 core
+    # not needed with Strong Parameters
     config.active_record.whitelist_attributes = false
 
   end
