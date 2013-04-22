@@ -106,7 +106,7 @@ angular.module('common.services').factory('Utilities', ['$rootScope', function (
             errorDetails.push(data.stack);
         } else if (data.hasOwnProperty('error_data')) {
             errorDetails.push(data.error_data.type + ': ' + data.error_data.message);
-            errorDetails.push(data.error_data.stack_trace);
+            errorDetails.push(data.error_data.trace);
         } else if (data.hasOwnProperty('error')) {
             errorDetails.push(data.error);
         } else if (data.hasOwnProperty('errors')) {
