@@ -15,7 +15,7 @@ gem 'activeadmin', '~> 0.6.0'
 gem 'meta_search', '~> 1.1.3'
 
 gem 'angularjs-rails-resource', '~> 0.1.4'
-gem 'jquery-rails', '~> 2.1.3'
+gem 'jquery-rails', '~> 2.1.4'
 
 # Gems used only for assets and not required
 # in production environments by default.
