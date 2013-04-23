@@ -4,7 +4,7 @@ gem 'rails', '~> 3.2.13'
 
 gem 'sqlite3', '~> 1.3.7'
 
-gem 'restful_json', '~> 3.4.1'
+gem 'restful_json', '~> 3.4.2'
 gem 'devise', '~> 2.2.3'
 gem 'strong_parameters', '~> 0.2.0'
 gem 'cancan', '~> 1.6.9'
