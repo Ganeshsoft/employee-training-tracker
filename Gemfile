@@ -4,17 +4,18 @@ gem 'rails', '~> 3.2.13'
 
 gem 'sqlite3', '~> 1.3.7'
 
-gem 'restful_json', '~> 3.4.2'
-gem 'devise', '~> 2.2.3'
-gem 'strong_parameters', '~> 0.2.0'
-gem 'cancan', '~> 1.6.9'
-gem 'active_model_serializers', '~> 0.7.0'
+gem 'restful_json', '~> 4.2.0'
+gem 'devise', '~> 2.2.4'
+gem 'strong_parameters', '~> 0.2.1'
+gem 'cancan', '~> 1.6.10'
+gem 'permitters', '~> 0.0.1'
+gem 'active_model_serializers', '~> 0.8.1'
 gem 'navigasmic', '~> 1.0.4'
 
 gem 'activeadmin', '~> 0.6.0'
 gem 'meta_search', '~> 1.1.3'
 
-gem 'angularjs-rails-resource', '~> 0.1.4'
+gem 'angularjs-rails-resource', '~> 0.1.5'
 gem 'jquery-rails', '~> 2.1.4'
 
 # Gems used only for assets and not required

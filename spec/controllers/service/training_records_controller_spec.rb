@@ -1,7 +1,6 @@
 require 'spec_helper'
 require 'factory_girl'
 
-# commented because two currently failing and stepford still unstable. tommy asked if could merge early
 describe Service::TrainingRecordsController do
   login_user
 
@@ -40,16 +39,8 @@ describe Service::TrainingRecordsController do
 
     it "create should add object so that subsequent get with same id works" do
       json = build(:training_record).as_json
-      #raise "json was #{json.inspect}"
       json_post :create, training_record: deep_build(:training_record).as_json
       val = JSON.parse(response.body)
-      #response.status.should eq(201), "Failed, #{response.inspect}"
-      #url = response.headers['Location']
-      #url.should_not be_nil
-      #url.should start_with 'http://test.host/service/training_records'
-      #id = url.split('/').last
-      #id.should_not be_nil
-      #id.to_i.should > 0
       val.should_not be_nil
       val['training_record'].should_not be_nil
       val['training_record']['id'].should_not be_nil
@@ -91,7 +82,6 @@ describe Service::TrainingRecordsController do
       d2.should_not eq(d1) # test setup assumption
       json_put :update, id: id, training_record: record.as_json
       response.status.should eq(200), "update failed (#{response.status}) with response: #{response.body}"
-      #response.status.should eq(204), "update failed (#{response.status}) with response: #{response.body}"
       json_get :show, id: id
       response.status.should eq(200), "show failed (#{response.status}): #{response.body}"
       JSON.parse(response.body)['training_record'].should_not be_nil
