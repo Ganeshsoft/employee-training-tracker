@@ -99,9 +99,9 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 [aa]: http://activeadmin.info/
 [ams]: https://github.com/rails-api/active_model_serializers
 [sp]: https://github.com/rails/strong_parameters
-[permitters]: http://www.broadcastingadam.com/2012/07/parameter_authorization_in_rails_apis/
-[restful-json]: https://github.com/rubyservices/restful_json
-[arr]: https://github.com/tpodom/angularjs-rails-resource
+[permitters]: https://github.com/permitters/permitters
+[restful-json]: https://github.com/FineLinePrototyping/restful_json
+[arr]: https://github.com/FineLinePrototyping/angularjs-rails-resource
 [jasmine]: http://pivotal.github.com/jasmine/
 [jasmine-gem]: https://github.com/pivotal/jasmine-gem
 [rspec]: http://rspec.info/
